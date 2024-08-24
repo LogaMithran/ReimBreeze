@@ -4,54 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e0234da-fdb9-44e4-9375-2461678a74f8" name="Changes" comment="feat: added authentication &amp; created the admin panel using trestle">
-      <change afterPath="$PROJECT_DIR$/app/admin/admins_admin.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/admin/reimbursements_admin.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/approval.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin_reimburse_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/employees_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/admin_reimburse_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/employees_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/reimbursements_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/admin.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/employee.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/reimbursement.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/admins/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/reimbursements/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240824051710_create_employee_reimbursements.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240824053154_create_employees.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240824054620_create_reimbursements.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240824055331_rename_column_in_reimbursement.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240824075254_add_column_to_reimbursements.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20240824105428_create_admins.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/admin_reimburse_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/admin_reimburses_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/employee_reimbursements_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/employees_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/reimbursements_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/admin_reimburses.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/admins.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/employee_reimbursements.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/employees.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/reimbursements.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/admin_reimburse_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/admin_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/employee_reimbursement_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/employee_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/reimbursement_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/admin_reimburses_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/employee_reimbursements_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/employees_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/reimbursements_test.rb" afterDir="false" />
+    <list default="true" id="2e0234da-fdb9-44e4-9375-2461678a74f8" name="Changes" comment="feat: build - 1&#10;created employee reimb portal and admin approval portal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/auth/users_admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/auth/users_admin.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/employee_rembruises/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/admins_admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/admins_admin.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/reimbursements_admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/reimbursements_admin.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/approval.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/approval.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admin_reimburse_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admin_reimburse_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/employee.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/employee.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/admins/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/admins/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/reimbursements/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reimbursements/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/initializers/trestle.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/trestle.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +186,7 @@
       <updated>1724413515008</updated>
       <workItem from="1724413517783" duration="3952000" />
       <workItem from="1724417481644" duration="10166000" />
-      <workItem from="1724475147621" duration="26901000" />
+      <workItem from="1724475147621" duration="35477000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added authentication &amp; created the admin panel using trestle">
       <option name="closed" value="true" />
@@ -233,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724424969851</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: build - 1&#10;created employee reimb portal and admin approval portal">
+      <option name="closed" value="true" />
+      <created>1724515246027</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1724515246027</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +212,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: added authentication &amp; created the admin panel using trestle" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added authentication &amp; created the admin panel using trestle" />
+    <MESSAGE value="feat: build - 1&#10;created employee reimb portal and admin approval portal" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: build - 1&#10;created employee reimb portal and admin approval portal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -286,10 +258,42 @@
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin_reimburse_controller.rb</url>
+          <line>11</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin_reimburse_controller.rb</url>
+          <line>14</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin_reimburse_controller.rb</url>
+          <line>5</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/views/admin/admins/index.html.erb</url>
+          <line>57</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/employee_reimbursement_platform@employee_reimbursement_platform.rcov" NAME="employee_reimbursement_platform Coverage Results" MODIFIED="1724502644742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="employee_reimbursement_platform" />
+    <SUITE FILE_PATH="coverage/employee_reimbursement_platform@employee_reimbursement_platform.rcov" NAME="employee_reimbursement_platform Coverage Results" MODIFIED="1724523790523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="employee_reimbursement_platform" />
   </component>
 </project>

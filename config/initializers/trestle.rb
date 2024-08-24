@@ -64,11 +64,11 @@ Trestle.configure do |config|
 
   # Add an explicit menu block to be added to the admin navigation.
   #
-  config.menu do
-    group "Admin" do
-      item "Approve", "/admin/approve", icon: "fa fa-car", priority: :first
-    end
-  end
+  # config.menu do
+  #   group "Admin" do
+  #     item "Approve", "/admin/approve", icon: "fa fa-car", priority: :first
+  #   end
+  # end
 
   # == Extension Options
   #

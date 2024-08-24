@@ -16,7 +16,7 @@ $(document).ready(function () {
             changeButtonProps(".revoke", buttonId, "#ddd", "#000000", "Revoking")
             revoke(".revoke", buttonId)
         } catch (e) {
-            changeButtonProps(".act", buttonId, "#ff0000", "#000000", "Failed")
+            changeButtonProps(".revoke", buttonId, "#ff0000", "#000000", "Failed")
             console.log(e)
         }
     });

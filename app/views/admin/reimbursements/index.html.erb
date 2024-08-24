@@ -30,7 +30,7 @@
         Total submitted: <%= Reimbursement.all.sum(:amount) %>
       </div>
       <div class="approved">
-        Total approved: <%= Reimbursement.where(status: "approved").sum(:amount) %>
+        Total approved: <%= Reimbursement.where(status: 1).sum(:amount) %>
       </div>
     </div>
     <div class="table-container">
@@ -40,6 +40,7 @@
             <th class="">Type</th>
             <th class="">Amount</th>
             <th class="">Status</th>
+            <th class="">Date of approval</th>
             <th class="">Date of submission</th>
           </tr>
         </thead>
@@ -49,9 +50,24 @@
           <tr>
             <td class=""> <%= x["reimbursement_type"] %> </td>
             <td class=""><%= x["amount"] %></td>
-            <td class=""><%= x["status"] %></td>
             <td class="">
-                <%= x["created_at"].strftime("%d %b %Y") %>
+              <%= case x["status"]
+                  when nil
+                    "Pending"
+                  when "1"
+                    "Approved"
+                  when "0"
+                    "Revoked"
+                  else
+                    "Pending"
+                  end
+              %>
+            </td>
+            <td class="">
+              <%= x["approval_time"] && x["approval_time"].in_time_zone('Asia/Kolkata').strftime("%d %b %Y %H %M") rescue "-"%>
+            </td>
+            <td class="">
+                <%= x["created_at"].in_time_zone('Asia/Kolkata').strftime("%d %b %Y %H %M") %>
             </td>
           </tr>
         <% end %>

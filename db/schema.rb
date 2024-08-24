@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_24_105428) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_24_165849) do
   create_table "admin_reimburses", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "employee_name"
     t.string "email"
@@ -30,6 +30,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_24_105428) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "designation"
+    t.string "department"
+    t.string "first_name"
+    t.string "last_name"
   end
 
   create_table "reimbursements", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -40,6 +44,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_24_105428) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
+    t.datetime "approval_time"
+    t.string "approved_by"
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|

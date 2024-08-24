@@ -36,27 +36,49 @@
       <table class="trestle-table">
         <thead>
         <tr>
-          <th class="">Type</th>
-          <th class="">Amount</th>
-          <th class="">Status</th>
-          <th class="">Date of submission</th>
-          <th class="">Act on reimbursement</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Date of submission</th>
+          <th>Submitted by</th>
+          <th>Department</th>
+          <th>Status</th>
+          <th>Act on reimbursement</th>
         </tr>
         </thead>
 
         <tbody>
-        <% Reimbursement.where("status = 0 OR status IS NULL").order(created_at: :desc).each do |x| %>
+        <% Reimbursement.order(created_at: :desc).each do |x| %>
           <tr>
             <td class=""> <%= x["reimbursement_type"] %> </td>
             <td class=""><%= x["amount"] %></td>
-            <td class=""><%= x["status"] %></td>
             <td class="">
               <%= x["created_at"].strftime("%d %b %Y") %>
             </td>
-            <td>
-              <button button_id="<%= x['id'] %>" class="btn btn-success act act_<%= x['id'] %>">Act</button>
-              <button button_id="<%= x['id'] %>" class="btn btn-danger revoke revoke_<%= x['id'] %>">Revoke</button>
+            <td class=""> <%= x["employee_name"] %> </td>
+            <td class=""> <%= Employee.where(employee_name: x["employee_name"]).first.department rescue "-" %> </td>
+            <td class="">
+              <%= case x["status"]
+                  when nil
+                    "Pending"
+                  when "1"
+                    "Approved"
+                  when "0"
+                    "Revoked"
+                  else
+                    "Pending"
+                  end
+              %>
             </td>
+            <% if x["status"]&.to_i == 1 %>
+              <td> Approved</td>
+            <% elsif x["status"]&.to_i == 0 %>
+              <td> Revoked</td>
+            <% else %>
+              <td>
+                <button button_id="<%= x['id'] %>" class="btn btn-success act act_<%= x['id'] %>">Approve</button>
+                <button button_id="<%= x['id'] %>" class="btn btn-danger revoke revoke_<%= x['id'] %>">Revoke</button>
+              </td>
+            <% end %>
           </tr>
         <% end %>
         </tbody>
