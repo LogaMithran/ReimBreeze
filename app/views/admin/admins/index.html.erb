@@ -1,0 +1,73 @@
+<%= javascript_include_tag 'approval' %>
+
+<header class="content-header">
+  <div class="content-header-title">
+    <h1>Listing All Employees Reimbursements</h1>
+  </div>
+
+  <div class="content-header-toolbars">
+
+    <div class="btn-toolbar secondary-toolbar" role="toolbar">
+    </div>
+  </div>
+
+  <div class="content-header-breadcrumbs">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a data-turbo-frame="_top" href="/admin">Home</a>
+      </li>
+      <li class="breadcrumb-item active">
+        <a data-turbo-frame="_top" href="/admin/reimbursements">admin</a>
+      </li>
+    </ol>
+  </div>
+</header>
+<div class="main-content-area" data-scroll-target="">
+  <div class="main-content">
+    <div class="status">
+      <div class="submitted">
+        Total submitted: <%= Reimbursement.all.sum(:amount) %>
+      </div>
+      <div class="approved">
+        Total approved: <%= Reimbursement.where(status: 1).sum(:amount) %>
+      </div>
+    </div>
+    <div class="table-container">
+      <table class="trestle-table">
+        <thead>
+        <tr>
+          <th class="">Type</th>
+          <th class="">Amount</th>
+          <th class="">Status</th>
+          <th class="">Date of submission</th>
+          <th class="">Act on reimbursement</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% Reimbursement.where("status = 0 OR status IS NULL").order(created_at: :desc).each do |x| %>
+          <tr>
+            <td class=""> <%= x["reimbursement_type"] %> </td>
+            <td class=""><%= x["amount"] %></td>
+            <td class=""><%= x["status"] %></td>
+            <td class="">
+              <%= x["created_at"].strftime("%d %b %Y") %>
+            </td>
+            <td>
+              <button button_id="<%= x['id'] %>" class="btn btn-success act act_<%= x['id'] %>">Act</button>
+              <button button_id="<%= x['id'] %>" class="btn btn-danger revoke revoke_<%= x['id'] %>">Revoke</button>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<style>
+    .status {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>

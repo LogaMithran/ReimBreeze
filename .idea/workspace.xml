@@ -4,16 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e0234da-fdb9-44e4-9375-2461678a74f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/trestle/custom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/trestle/_custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/policies/user_policy.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/initializers/trestle.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/employee_reimbursement_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/employee_reimbursement_platform.iml" afterDir="false" />
+    <list default="true" id="2e0234da-fdb9-44e4-9375-2461678a74f8" name="Changes" comment="feat: added authentication &amp; created the admin panel using trestle">
+      <change afterPath="$PROJECT_DIR$/app/admin/admins_admin.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/admin/reimbursements_admin.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/approval.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/admin_reimburse_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/employees_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/admin_reimburse_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/employees_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/reimbursements_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/admin.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/employee.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/reimbursement.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/admins/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/reimbursements/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240824051710_create_employee_reimbursements.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240824053154_create_employees.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240824054620_create_reimbursements.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240824055331_rename_column_in_reimbursement.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240824075254_add_column_to_reimbursements.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20240824105428_create_admins.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/admin_reimburse_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/admin_reimburses_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/employee_reimbursements_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/employees_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/reimbursements_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/admin_reimburses.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/admins.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/employee_reimbursements.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/employees.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/reimbursements.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/admin_reimburse_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/admin_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/employee_reimbursement_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/employee_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/reimbursement_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/admin_reimburses_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/employee_reimbursements_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/employees_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/reimbursements_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/auth/users_admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/auth/users_admin.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/config/manifest.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/config/manifest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/employee_rembruises/index.html.erb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/trestle.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/trestle.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +74,13 @@
     &quot;accountId&quot;: &quot;4bd6eab2-0632-4f54-9009-bad2d164f0c2&quot;
   }
 }</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -50,26 +95,42 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Rails.employee_reimbursement_platform.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/logamithran/employee_reimbursement_platform",
+    "last_opened_file_path": "/home/logamithran/RailsFlixDemo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "ruby.structure.view.model.defaults.configured": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/admin/create_employee_reimbursements" />
+      <recent name="$PROJECT_DIR$/app/views/admin/employees" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts/trestle" />
+      <recent name="$PROJECT_DIR$/app/controllers/admin" />
+      <recent name="$PROJECT_DIR$/app/views/admin" />
+      <recent name="$PROJECT_DIR$/app/views" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.employee_reimbursement_platform">
     <configuration name="employee_reimbursement_platform" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="employee_reimbursement_platform" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="RVM: ruby-3.1.2" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov" ENABLE_BRANCH_COVERAGE="true" ENABLE_FORKED_COVERAGE="true">
@@ -82,7 +143,7 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="default" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
       <method v="2" />
@@ -138,6 +199,11 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Rails.employee_reimbursement_platform" />
+      <item itemvalue="Rake.spec: employee_reimbursement_platform" />
+      <item itemvalue="Rake.test: employee_reimbursement_platform" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -156,11 +222,74 @@
       <option name="presentableId" value="Default" />
       <updated>1724413515008</updated>
       <workItem from="1724413517783" duration="3952000" />
-      <workItem from="1724417481644" duration="3277000" />
+      <workItem from="1724417481644" duration="10166000" />
+      <workItem from="1724475147621" duration="26901000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: added authentication &amp; created the admin panel using trestle">
+      <option name="closed" value="true" />
+      <created>1724424969851</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724424969851</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: added authentication &amp; created the admin panel using trestle" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added authentication &amp; created the admin panel using trestle" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin/employee_reimbursement_controller.rb</url>
+          <line>24</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin/employee_reimbursement_controller.rb</url>
+          <line>26</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin/employee_reimbursement_controller.rb</url>
+          <line>5</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin/employee_reimbursement_controller.rb</url>
+          <line>6</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/admin/employee_reimbursement_controller.rb</url>
+          <line>14</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/employee_reimbursement_platform@employee_reimbursement_platform.rcov" NAME="employee_reimbursement_platform Coverage Results" MODIFIED="1724502644742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="employee_reimbursement_platform" />
   </component>
 </project>
