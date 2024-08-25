@@ -27,26 +27,26 @@
   <div class="main-content">
     <div class="status">
       <div class="submitted">
-        Total submitted: <%= Reimbursement.all.sum(:amount) %>
+        Total submitted: <%= Reimbursement.where(employee_email: current_user.email).sum(:amount) %>
       </div>
       <div class="approved">
-        Total approved: <%= Reimbursement.where(status: 1).sum(:amount) %>
+        Total approved: <%= Reimbursement.where(employee_email: current_user.email, status: 1).sum(:amount) %>
       </div>
     </div>
     <div class="table-container">
       <table class="trestle-table">
         <thead>
-          <tr>
-            <th class="">Type</th>
-            <th class="">Amount</th>
-            <th class="">Status</th>
-            <th class="">Date of approval</th>
-            <th class="">Date of submission</th>
-          </tr>
+        <tr>
+          <th class="">Type</th>
+          <th class="">Amount</th>
+          <th class="">Status</th>
+          <th class="">Date of approval</th>
+          <th class="">Date of submission</th>
+        </tr>
         </thead>
 
         <tbody>
-        <% Reimbursement.all.order(created_at: :desc).each do |x| %>
+        <% Reimbursement.where(employee_email: current_user.email).order(created_at: :desc).each do |x| %>
           <tr>
             <td class=""> <%= x["reimbursement_type"] %> </td>
             <td class=""><%= x["amount"] %></td>
@@ -64,10 +64,10 @@
               %>
             </td>
             <td class="">
-              <%= x["approval_time"] && x["approval_time"].in_time_zone('Asia/Kolkata').strftime("%d %b %Y %H %M") rescue "-"%>
+              <%= x["approval_time"] && x["approval_time"].in_time_zone('Asia/Kolkata').strftime("%d %b %Y %H %M") rescue "-" %>
             </td>
             <td class="">
-                <%= x["created_at"].in_time_zone('Asia/Kolkata').strftime("%d %b %Y %H %M") %>
+              <%= x["created_at"].in_time_zone('Asia/Kolkata').strftime("%d %b %Y %H %M") %>
             </td>
           </tr>
         <% end %>
@@ -78,8 +78,8 @@
 </div>
 
 <style>
-  .status{
-      display: flex;
-      justify-content: space-between;
-  }
+    .status {
+        display: flex;
+        justify-content: space-between;
+    }
 </style>

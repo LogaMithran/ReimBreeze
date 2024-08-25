@@ -2,7 +2,7 @@ Trestle.resource(:employees) do
   menu do
     if current_user.admin?
       group :admin, priority: :last do
-        item :employees, icon: "fa fa-star"
+        item :employees, icon: "far fa-address-book"
       end
     end
   end

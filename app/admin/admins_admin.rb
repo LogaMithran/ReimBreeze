@@ -2,7 +2,7 @@ Trestle.resource(:admins) do
   menu do
     if current_user.admin?
       group :admin, priority: :last do
-        item :admins, icon: "fa fa-star", label: "Approve"
+        item :admins, icon: "	fa fa-inr", label: "Approve"
       end
     end
   end

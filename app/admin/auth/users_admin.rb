@@ -25,14 +25,14 @@ Trestle.resource(:users, model: User, scope: Auth) do
     row do
       col(sm: 6) { text_field :first_name }
       col(sm: 6) { text_field :last_name }
-      col do
-        form.check_box :admin
-      end
     end
 
     row do
       col(sm: 6) { password_field :password }
       col(sm: 6) { password_field :password_confirmation }
+    end
+    col do
+      form.check_box :admin
     end
   end
 

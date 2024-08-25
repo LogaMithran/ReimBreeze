@@ -5,7 +5,7 @@ Trestle.resource(:reimbursements) do
   menu do
     if !current_user.admin?
       group :admin, priority: :last do
-        item :reimbursements, icon: "fa fa-star", label: t(:reimbursements)
+        item :reimbursements, icon: "fa fa-inr", label: t(:reimbursements)
       end
     end
   end
