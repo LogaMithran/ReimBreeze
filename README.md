@@ -20,4 +20,4 @@ Employee making reimbursement
 ## Admin login
 Admin approving / revoking those requests 
 
-![admin_login](./docs/images/admin_login.gif)
+![admin_login](https://github.com/user-attachments/assets/8a3c04d8-b9f9-4b64-90ad-1ed4d9cacc07)
