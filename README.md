@@ -15,10 +15,11 @@ rails s
 ## Employee login
 Employee making reimbursement
 
-https://github.com/user-attachments/assets/c2784119-0a50-43ef-8a18-411782902cd1
+https://github.com/user-attachments/assets/bc61aa66-a9b5-4e13-b160-7b58b8505c7a
 
 ## Admin login
 Admin approving / revoking those requests 
 
-https://github.com/user-attachments/assets/bc61aa66-a9b5-4e13-b160-7b58b8505c7a
 
+
+https://github.com/user-attachments/assets/c2784119-0a50-43ef-8a18-411782902cd1
