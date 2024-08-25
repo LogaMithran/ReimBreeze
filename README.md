@@ -15,9 +15,9 @@ rails s
 ## Employee login
 Employee making reimbursement
 
-![Employee_login](./docs/images/employee_login.mp4)
+![Employee_login](./docs/images/employee_login.gif)
 
 ## Admin login
 Admin approving / revoking those requests 
 
-![admin_login](./docs/images/admin_login.mp4)
+![admin_login](./docs/images/admin_login.gif)
