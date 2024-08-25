@@ -4,9 +4,7 @@ Trestle.resource(:reimbursements) do
 
   menu do
     if !current_user.admin?
-      group :admin, priority: :last do
-        item :reimbursements, icon: "fa fa-inr", label: t(:reimbursements)
-      end
+      item :reimbursements, icon: "fa fa-inr", label: t(:reimbursements)
     end
   end
 
@@ -23,7 +21,7 @@ Trestle.resource(:reimbursements) do
   build_instance do |attrs, _params|
     next Reimbursement.new if attrs.blank?
 
-    reimbursement =  Reimbursement.new(attrs)
+    reimbursement = Reimbursement.new(attrs)
     reimbursement.employee_name = "#{current_user.first_name} #{current_user.last_name}"
     reimbursement.employee_email = current_user.email
     reimbursement
