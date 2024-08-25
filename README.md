@@ -1,24 +1,23 @@
-# README
+# ReimBreeze
+A platform for employee reimbursement wherein employees can submit requests for reimbursement and their supervisors can authorize them
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+ReimBreeze requires ruby v3.1.2 to run and Rails 7.1.
 
-* Ruby version
+```sh
+cd ReimBreeze
+export DB_USER=dbuser
+export DB_PASSWORD=dbpassword
+rails s
+```
 
-* System dependencies
+## Employee login
+Employee making reimbursement
 
-* Configuration
+![Employee_login](./docs/images/employee_login.mp4)
 
-* Database creation
+## Admin login
+Admin approving / revoking those requests 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![admin_login](./docs/images/admin_login.mp4)
